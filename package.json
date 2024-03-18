@@ -1,0 +1,19 @@
+{
+  "name": "mern_interview",
+  "version": "1.0.0",
+  "description": "Sky Goal Next's assignment for creating authentication apis using express and mongodb as database (login,  signup, userdetails, etc)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rupaksaikrishnayerramsetti/MERN_Interview.git"
+  },
+  "author": "Yerramsetti R Sai Krishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rupaksaikrishnayerramsetti/MERN_Interview/issues"
+  },
+  "homepage": "https://github.com/rupaksaikrishnayerramsetti/MERN_Interview#readme"
+}
