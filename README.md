@@ -39,6 +39,9 @@ Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY
 the above content should be kept in 'headers'
 
 Note the my Advanced project had many features which includes above API as a Part below the repository link for the project and this project got recognized by a 2 project managers and appreciated by them
+
 https://github.com/rupaksaikrishnayerramsetti/KEAOP_MERN
+
 This is the drive link for the video recording of the manager-level conference 
+
 https://drive.google.com/file/d/1m057PIbYRWv1lx4JcNPfpgB-7YN-i0_U/view?usp=drive_link
