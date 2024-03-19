@@ -14,6 +14,7 @@ In testing tools like Postman or Rapid Api
 First Api of signup can be tested with the 'post' method and use the below URL 
 
 http://localhost:8020/signup
+
 {
   "user_name": "Y R Sai Krishna",
   "email": "yrsk@gmail.com",
@@ -23,23 +24,29 @@ http://localhost:8020/signup
   "salary": 60000,
   "password": "abcd1234"
 }
+
 the above content should be kept in 'body' with the structure of 'JSON' should be used
 
 The second API of login can be tested with the 'post' method and use the below URL
 
 http://localhost:8020/login
+
 {
   "email": "yrsk@gmail.com",
   "password" : "abcd1234"
 }
+
 the above content should be kept in 'body' with the structure of 'JSON' should be used
 Note:- Copy the token got as a response of the login URL and use it in the next API
 
 Third Api of userdetails can be tested with the 'get' method and use the below URL
 
 http://localhost:8020/userdetails
+
 In the headers section use the below key-value pairs
+
 Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY3NmZiMzJhOTA0Zjg0OTNkIiwiZW1haWwiOiJydXBha3NhaWtyaXNobmF5ZXJyYW1zZXR0aUBnbWFpbC5jb20iLCJpYXQiOjE3MTA3ODU5MjB9.dJez8AwUEux_SeKnBXtseq9aWHQ1Q7i4aAW9lgrp9M4
+
 the above content should be kept in 'headers'
 
 Note that my Advanced project had many features which included the above API with some extra API required for my personal project the repository link was provided and this project got recognized by 2 project managers and appreciated by them
