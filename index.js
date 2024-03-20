@@ -28,6 +28,8 @@ app.use((req, res, next) => {
             next();
             break;
         case "/userdetails":
+        case "/updateUserDetails":
+        case "/changePassword":
             evaluateJwt(req, res, next);
             break
         default:

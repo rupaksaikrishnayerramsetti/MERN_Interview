@@ -34,3 +34,31 @@ http://localhost:8020/userdetails
 In headers section use the below key value pairs
 Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY3NmZiMzJhOTA0Zjg0OTNkIiwiZW1haWwiOiJydXBha3NhaWtyaXNobmF5ZXJyYW1zZXR0aUBnbWFpbC5jb20iLCJpYXQiOjE3MTA3ODU5MjB9.dJez8AwUEux_SeKnBXtseq9aWHQ1Q7i4aAW9lgrp9M4
 the above content should be kept in 'headers'
+
+Extra Api which includes update the user details and update password 
+
+For updating user details can be tested with the 'put' method and use below url
+​http://localhost:8020/updateUserDetails
+In headers section use the below key value pairs
+Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY3NmZiMzJhOTA0Zjg0OTNkIiwiZW1haWwiOiJydXBha3NhaWtyaXNobmF5ZXJyYW1zZXR0aUBnbWFpbC5jb20iLCJpYXQiOjE3MTA3ODU5MjB9.dJez8AwUEux_SeKnBXtseq9aWHQ1Q7i4aAW9lgrp9M4
+the above content should be kept in 'headers'
+And in the body section use the below format of the json 
+{
+  "user_name": "Yerramsetti R Sai Krishna",
+  "gender": "male",
+  "occupation": "SDE 1",
+  "phone_number": "8919475676",
+  "salary": 54000
+}
+
+For updating password of a user can be tested with the 'put' method and use below url
+​http://localhost:8020/changePassword
+In headers section use the below key value pairs
+Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY3NmZiMzJhOTA0Zjg0OTNkIiwiZW1haWwiOiJydXBha3NhaWtyaXNobmF5ZXJyYW1zZXR0aUBnbWFpbC5jb20iLCJpYXQiOjE3MTA3ODU5MjB9.dJez8AwUEux_SeKnBXtseq9aWHQ1Q7i4aAW9lgrp9M4
+the above content should be kept in 'headers'
+And in the body section use the below format of the json 
+{
+  "password": "abcd1234",
+  "newpassword": "abcd@1234"
+}
+Note:- deleting user is only done as soft delete by using a extra column by changing it's value in the Real time bases.
