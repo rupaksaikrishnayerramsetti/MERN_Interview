@@ -49,6 +49,43 @@ Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY
 
 the above content should be kept in 'headers'
 
+For updating user details can be tested with the 'put' method and use below URL
+
+​http://localhost:8020/updateUserDetails
+
+In headers section use the below key value pairs
+
+Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY3NmZiMzJhOTA0Zjg0OTNkIiwiZW1haWwiOiJydXBha3NhaWtyaXNobmF5ZXJyYW1zZXR0aUBnbWFpbC5jb20iLCJpYXQiOjE3MTA3ODU5MjB9.dJez8AwUEux_SeKnBXtseq9aWHQ1Q7i4aAW9lgrp9M4
+
+the above content should be kept in 'headers'
+In the body section use the below format of the JSON 
+
+{
+  "user_name": "Yerramsetti R Sai Krishna",
+  "gender": "male",
+  "occupation": "SDE 1",
+  "phone_number": "8919475676",
+  "salary": 54000
+}
+
+Updating the password of a user can be tested with the 'put' method and using below URL
+
+​http://localhost:8020/changePassword
+
+In the headers section use the below key-value pairs
+
+Authorization   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjVmODg0ZWY3NmZiMzJhOTA0Zjg0OTNkIiwiZW1haWwiOiJydXBha3NhaWtyaXNobmF5ZXJyYW1zZXR0aUBnbWFpbC5jb20iLCJpYXQiOjE3MTA3ODU5MjB9.dJez8AwUEux_SeKnBXtseq9aWHQ1Q7i4aAW9lgrp9M4
+
+the above content should be kept in 'headers'
+In the body section use the below format of the JSON 
+
+{
+  "password": "abcd1234",
+  "newpassword": "abcd@1234"
+}
+
+Note:- deleting user is only done as soft delete by using a extra column by changing it's value in the Real time bases.
+
 Note that my Advanced project had many features which included the above API with some extra API required for my personal project the repository link was provided and this project got recognized by 2 project managers and appreciated by them
 
 https://github.com/rupaksaikrishnayerramsetti/KEAOP_MERN
