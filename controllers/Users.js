@@ -72,8 +72,57 @@ async function handleUserDetails(req, res) {
     }
 }
 
+async function handleUpdateUserDetails(req, res) {
+    try {
+        const body = req.body
+        if(req.tokenData) {
+            const user = {
+                user_name: body.user_name,
+                gender: body.gender,
+                occupation: body.occupation,
+                phone_number: body.phone_number,
+                salary: body.salary
+            }
+            const result = await Users.findByIdAndUpdate(req.tokenData.user_id, user);
+            return result?res.status(200).send("User Details got updated successfully"):res.status(404).send("User details not found");
+        } else {
+            return res.status(401).send("Token data not available");
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send("Internal Server Error");
+    }
+}
+
+async function handleChangePassword(req, res) {
+    try {
+        const body = req.body
+        if(req.tokenData) {
+            const oldpassswordDigest = hashPassword(body.password)
+            const user = await Users.find({_id: req.tokenData.user_id, password_digest: oldpassswordDigest})
+            let result;
+            if(user) {
+                const newpass = {
+                    password_digest: hashPassword(body.newpassword)
+                }
+                result = await Users.findByIdAndUpdate(req.tokenData.user_id, newpass);
+            } else {
+                result = false
+            }
+            return result?res.status(200).send("User password got updated successfully"):res.status(404).send("User's old password is wrong");
+        } else {
+            return res.status(401).send("Token data not available");
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send("Internal Server Error");
+    }
+}
+
 module.exports = {
     handleLogin,
     handleSignup,
-    handleUserDetails
+    handleUserDetails,
+    handleUpdateUserDetails,
+    handleChangePassword
 }
